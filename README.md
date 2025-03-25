@@ -16,7 +16,7 @@ Add dependency
 <dependency>
     <groupId>org.mvnsearch</groupId>
     <artifactId>dbunit-pg-ext</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.1.0</version>
 </dependency>
 ````
 
@@ -39,7 +39,7 @@ Then you can use `PostgresqlExtraDataTypeFactory` as data type factory.
         <dependency>
             <groupId>org.mvnsearch</groupId>
             <artifactId>dbunit-pg-ext</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
+            <version>0.1.0</version>
         </dependency>
     </dependencies>
     <configuration>
