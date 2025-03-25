@@ -5,7 +5,8 @@ import org.dbunit.database.DatabaseConfig;
 import org.dbunit.database.DatabaseConnection;
 import org.dbunit.database.IDatabaseConnection;
 import org.dbunit.dataset.xml.FlatDtdDataSet;
-import org.junit.Test;
+import org.dbunit.dataset.xml.FlatXmlDataSet;
+import org.junit.jupiter.api.Test;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -30,6 +31,12 @@ public class PgDataTypeTest {
     public Connection getConnection() throws Exception {
         Class.forName("org.postgresql.Driver");
         return DriverManager.getConnection("jdbc:postgresql://localhost:25432/demo", "postgres", "123456");
+    }
+
+    @Test
+    public void testDatasetDump() throws Exception {
+        DatabaseConnection connection = new PgConnection(getConnection(), "public");
+        FlatXmlDataSet.write(connection.createDataSet(new String[]{"item"}), Files.newOutputStream(Paths.get("dataset.xml")));
     }
 
 }
