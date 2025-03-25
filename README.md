@@ -7,6 +7,7 @@ Data types:
 
 - `json` and `jsonb`
 - `vector`: https://github.com/pgvector/pgvector
+- `money`
 
 Extra classes:
 
