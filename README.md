@@ -3,13 +3,12 @@ DBUnit PostgreSQL Extension
 
 `PostgresqlExtraDataTypeFactory` is to extend `PostgresqlDataTypeFactory` to support following data types:
 
-- `json`
-- `jsonb`
-- `vector`
+- `json` and `jsonb`
+- `vector`: https://github.com/pgvector/pgvector
 
 # Get Started
 
-Add dependency
+Add dependency in pom.xml:
 
 ```xml
 
@@ -44,7 +43,7 @@ Then you can use `PostgresqlExtraDataTypeFactory` as data type factory.
     </dependencies>
     <configuration>
         <dbconfig>
-            <datatypeFactory>org.mvnsearch.dbunit.ext.postgresql.PostgresqlExtraDataTypeFactory</datatypeFactory
+            <datatypeFactory>org.mvnsearch.dbunit.ext.postgresql.PostgresqlExtraDataTypeFactory</datatypeFactory>
         </dbconfig>
     </configuration>
 </plugin>
