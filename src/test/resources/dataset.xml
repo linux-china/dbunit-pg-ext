@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE dataset SYSTEM "database.dtd">
+<dataset>
+    <item id="a9b6276f-2f53-4813-83a6-9a63c1e59fc2" name="demo"
+          labels="{&quot;key&quot;:&quot;value&quot;}"
+          embedding="[ 0.39607423543930054, 0.558302104473114]"
+          price="15.20"
+          created_at="2024-11-11 11:11:11" updated_at="2024-11-11 11:11:11"/>
+</dataset>
