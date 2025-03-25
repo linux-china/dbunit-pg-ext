@@ -19,7 +19,7 @@ public class VectorType extends AbstractDataType {
     public static final DataType VECTOR = new VectorType();
 
     public VectorType() {
-        super("vector", Types.OTHER, String.class, false);
+        super("vector", Types.OTHER, PGvector.class, false);
     }
 
     @Override
