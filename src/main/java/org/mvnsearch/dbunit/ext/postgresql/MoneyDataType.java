@@ -26,7 +26,7 @@ public class MoneyDataType extends AbstractDataType {
     public Object typeCast(Object value) throws TypeCastException {
         if (value == null) {
             return null;
-        } else if (value instanceof Double) {
+        } else if (value instanceof Double || value instanceof Float) {
             return value;
         } else if (value instanceof String) {
             return value;
