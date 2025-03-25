@@ -1,10 +1,17 @@
 DBUnit PostgreSQL Extension
 =============================
 
-`PostgresqlExtraDataTypeFactory` is to extend `PostgresqlDataTypeFactory` to support following data types:
+dbunit-pg-ext is an extension for DBUnit to add more features for PostgreSQL.
+
+Data types:
 
 - `json` and `jsonb`
 - `vector`: https://github.com/pgvector/pgvector
+
+Extra classes:
+
+- `PostgresqlExtraDataTypeFactory`: extend `PostgresqlDataTypeFactory` and more data types for PostgreSQL
+- `PgConnection`: DBUnit `IDatabaseConnection` with `PostgresqlExtraDataTypeFactory`
 
 # Get Started
 
@@ -19,8 +26,6 @@ Add dependency in pom.xml:
 </dependency>
 ````
 
-Then you can use `PostgresqlExtraDataTypeFactory` as data type factory.
-
 # dbunit-maven-plugin configuration
 
 ```xml
@@ -33,7 +38,7 @@ Then you can use `PostgresqlExtraDataTypeFactory` as data type factory.
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>${postgresql.version}</version>
+            <version>42.7.5</version>
         </dependency>
         <dependency>
             <groupId>org.mvnsearch</groupId>
@@ -50,3 +55,7 @@ Then you can use `PostgresqlExtraDataTypeFactory` as data type factory.
 
 ```
 
+# References
+
+* PostgreSQL Data Types: https://www.postgresql.org/docs/current/datatype.html
+* DBUnit: https://www.dbunit.org/howto.html
