@@ -44,11 +44,7 @@ public class MoneyDataType extends AbstractDataType {
     public void setSqlValue(Object value, int column, PreparedStatement statement) throws SQLException, TypeCastException {
         PGobject pgObject = new PGobject();
         pgObject.setType("money");
-        if (value == null) {
-            pgObject.setValue(null);
-        } else {
-            pgObject.setValue(value.toString());
-        }
+        pgObject.setValue(value == null ? null : value.toString());
         statement.setObject(column, pgObject);
     }
 }
