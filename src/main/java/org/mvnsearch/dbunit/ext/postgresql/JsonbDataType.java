@@ -24,11 +24,7 @@ public class JsonbDataType extends AbstractDataType {
 
     @Override
     public Object typeCast(Object value) throws TypeCastException {
-        if (value == null) {
-            return null;
-        } else {
-            return value.toString();
-        }
+        return value == null ? null : value.toString();
     }
 
     @Override
@@ -40,11 +36,7 @@ public class JsonbDataType extends AbstractDataType {
     public void setSqlValue(Object value, int column, PreparedStatement statement) throws SQLException, TypeCastException {
         PGobject pgObject = new PGobject();
         pgObject.setType("jsonb");
-        if (value == null) {
-            pgObject.setValue(null);
-        } else {
-            pgObject.setValue(value.toString());
-        }
+        pgObject.setValue(value == null ? null : value.toString());
         statement.setObject(column, pgObject);
     }
 }
