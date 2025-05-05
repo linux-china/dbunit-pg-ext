@@ -13,10 +13,14 @@ public class PostgresqlExtraDataTypeFactory extends PostgresqlDataTypeFactory {
             return JsonbDataType.JSONB;
         } else if (Objects.equals(sqlTypeName, "json")) {
             return JsonDataType.JSON;
+        } else if (Objects.equals(sqlTypeName, "xml")) {
+            return XmlDataType.XML;
         } else if (Objects.equals(sqlTypeName, "vector")) {
             return VectorType.VECTOR;
         } else if (Objects.equals(sqlTypeName, "money")) {
             return MoneyDataType.MONEY;
+        } else if (Objects.equals(sqlTypeName, "_text")) {
+            return TextArrayDataType.TEXT_ARRAY;
         } else {
             return super.createDataType(sqlType, sqlTypeName);
         }
