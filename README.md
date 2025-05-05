@@ -3,11 +3,21 @@ DBUnit PostgreSQL Extension
 
 dbunit-pg-ext is an extension for DBUnit to add more features for PostgreSQL.
 
-Data types:
+Data types of `PostgresqlDataTypeFactory`:
+
+- `uuid`
+- `interval`
+- `inet`
+- `geometry`
+- `citext`
+
+Data types of `PostgresqlExtraDataTypeFactory`:
 
 - `json` and `jsonb`
+- `XML`
 - `vector`: https://github.com/pgvector/pgvector
 - `money`
+- `_text`: array of text
 
 Extra classes:
 
@@ -23,7 +33,7 @@ Add dependency in pom.xml:
 <dependency>
     <groupId>org.mvnsearch</groupId>
     <artifactId>dbunit-pg-ext</artifactId>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
 </dependency>
 ````
 
@@ -44,7 +54,7 @@ Add dependency in pom.xml:
         <dependency>
             <groupId>org.mvnsearch</groupId>
             <artifactId>dbunit-pg-ext</artifactId>
-            <version>0.1.1</version>
+            <version>0.1.2</version>
         </dependency>
     </dependencies>
     <configuration>
