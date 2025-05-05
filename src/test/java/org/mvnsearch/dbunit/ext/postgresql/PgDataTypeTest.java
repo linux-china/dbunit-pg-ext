@@ -26,6 +26,7 @@ public class PgDataTypeTest {
         JdbcDatabaseTester databaseTester = new JdbcDatabaseTester("org.postgresql.Driver", "jdbc:postgresql://localhost:25432/demo", "postgres", "123456");
         final IDatabaseConnection connection = databaseTester.getConnection();
         connection.getConfig().setProperty(DatabaseConfig.PROPERTY_DATATYPE_FACTORY, new PostgresqlExtraDataTypeFactory());
+        FlatDtdDataSet.write(connection.createDataSet(), Files.newOutputStream(Paths.get("database.dtd")));
     }
 
     public Connection getConnection() throws Exception {
