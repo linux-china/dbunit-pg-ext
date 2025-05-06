@@ -18,6 +18,9 @@ Data types of `PostgresqlExtraDataTypeFactory`:
 - `vector`: https://github.com/pgvector/pgvector
 - `money`
 - `_text`: array of text
+- range: `int4range`, `int8range`, `numrange`, `tsrange`, `tstzrange`, `daterange`
+- `hstore`: key-value pairs
+- `ltree`: tree-like structure
 
 Extra classes:
 
