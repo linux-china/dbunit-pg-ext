@@ -6,5 +6,6 @@
           embedding="[ 0.39607423543930054, 0.558302104473114]"
           price="15.20"
           tags="{tag1, tag2}"
+          attributes="&quot;key&quot;=>&quot;value&quot;"
           created_at="2024-11-11 11:11:11" updated_at="2024-11-11 11:11:11"/>
 </dataset>
