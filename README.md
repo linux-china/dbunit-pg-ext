@@ -36,7 +36,7 @@ Add dependency in pom.xml:
 <dependency>
     <groupId>org.mvnsearch</groupId>
     <artifactId>dbunit-pg-ext</artifactId>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
 </dependency>
 ````
 
@@ -57,7 +57,7 @@ Add dependency in pom.xml:
         <dependency>
             <groupId>org.mvnsearch</groupId>
             <artifactId>dbunit-pg-ext</artifactId>
-            <version>0.1.2</version>
+            <version>0.1.3</version>
         </dependency>
     </dependencies>
     <configuration>
