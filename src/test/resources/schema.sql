@@ -1,5 +1,6 @@
 CREATE EXTENSION vector;
-       
+CREATE EXTENSION hstore;
+
 create table item
 (
     id         uuid primary key,
@@ -7,7 +8,8 @@ create table item
     labels     json,
     embedding  vector,
     price      money,
-    tags      text[],
+    tags       text[],
+    attributes hstore,
     created_at timestamp    not null default now(),
     updated_at timestamp    not null default now()
 );
