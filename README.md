@@ -74,3 +74,4 @@ Add dependency in pom.xml:
 * PostgreSQL Data Types: https://www.postgresql.org/docs/current/datatype.html
 * DBUnit: https://www.dbunit.org/howto.html
 * DbUnit and JSON column type support: https://stackoverflow.com/questions/52845001/dbunit-and-json-column-type-support
+* DbUnit Extractor: https://plugins.jetbrains.com/plugin/7958-dbunit-extractor
